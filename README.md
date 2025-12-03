@@ -23,45 +23,6 @@ torch
 scikit-learn
 ```
 
-## Installation
-
-```bash
-pip install numpy torch scikit-learn
-```
-
-## Usage
-
-### Scaled Dot-Product Attention
-```python
-import numpy as np
-from attention import scaled_dot_product_attention
-
-# Create query, key, value matrices
-Q = np.random.randn(2, 4, 8)  # (batch_size, seq_len, d_k)
-K = np.random.randn(2, 4, 8)
-V = np.random.randn(2, 4, 8)
-
-# Compute attention
-context, attention_weights = scaled_dot_product_attention(Q, K, V)
-```
-
-### Transformer Encoder Block
-```python
-import torch
-from transformer import TransformerEncoderBlock
-
-# Initialize encoder block
-d_model = 512
-num_heads = 8
-d_ff = 2048
-
-encoder = TransformerEncoderBlock(d_model, num_heads, d_ff)
-
-# Forward pass
-x = torch.randn(32, 10, 512)  # (batch_size, seq_len, d_model)
-output = encoder(x)
-```
-
 ## Sample Outputs
 
 ### Scaled Dot-Product Attention Output
